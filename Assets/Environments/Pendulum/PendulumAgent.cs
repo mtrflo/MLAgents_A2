@@ -6,6 +6,8 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Sensors;
+using UnityEngine.UIElements;
 
 public class PendulumAgent : Agent
 {
@@ -24,11 +26,6 @@ public class PendulumAgent : Agent
     {
     }
 
-    void ActionMaker()
-    {
-            ChooseAction();
-
-    }
     
     void ChooseAction()
     {
@@ -72,9 +69,34 @@ public class PendulumAgent : Agent
 
         rb.AddTorque(0, 0, torque);
     }
+    float angle;
+    public override void CollectObservations(VectorSensor sensor)
+    {
+        Vector3 toPo = (point.position - transform.position).normalized;
+        angle = Vector3.Angle(toPo, Vector3.up);
+        float sign = MathF.Sign(point.position.x - transform.position.x);
+        if (sign > 0)
+            angle = 180 + (180 - angle);
+        angle = angle * Mathf.Deg2Rad;
+
+        float angvel = rb.angularVelocity.magnitude * Mathf.Sign(rb.angularVelocity.z);
+
+        float ob1_sin = Mathf.Sin(angle) / Mathf.PI * 2;
+        float ob2_cos = Mathf.Cos(angle) / Mathf.PI * 2;
+        float ob3_angvel4 = angvel / 4;
+
+        sensor.AddObservation(ob1_sin);
+        sensor.AddObservation(ob2_cos);
+        sensor.AddObservation(ob3_angvel4);
+    }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        Debug.Log(actions.DiscreteActions[0]);
+        MakeAction(actions.DiscreteActions[0]);
+    }
+    private void FixedUpdate()
+    {
+        SetReward(Mathf.Cos(angle));
+        //EndEpisode();
     }
 }
