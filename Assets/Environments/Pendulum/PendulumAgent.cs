@@ -24,13 +24,18 @@ public class PendulumAgent : Agent
     }
     private void Start()
     {
+        //InvokeRepeating(nameof(End), 0, 10);
+        Time.timeScale = 1;
     }
+    // void End()
+    // {
+    //     EndEpisode();
+    // }
 
-    
     void ChooseAction()
     {
         //current_state.Clear();
-        
+
         //Vector3 toPo = (point.position - transform.position).normalized;
         //float angle = Vector3.Angle(toPo, Vector3.up);
         //float sign = MathF.Sign(point.position.x - transform.position.x);
@@ -93,10 +98,7 @@ public class PendulumAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         MakeAction(actions.DiscreteActions[0]);
-    }
-    private void FixedUpdate()
-    {
         SetReward(Mathf.Cos(angle));
-        //EndEpisode();
     }
+
 }
