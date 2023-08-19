@@ -13,7 +13,7 @@ public class PipeSpawner : MonoBehaviour {
 	//public TimeController timeController;
 
 	private float startSpawnTime = 0;
-    WaitForSecondsRealtime wfsr;
+    WaitForSeconds wfsr;
 	private List<PipeMove> pipeMoves;
 
 	public PipeMove lastPipe;
@@ -35,9 +35,9 @@ public class PipeSpawner : MonoBehaviour {
 
     public IEnumerator StartSpawning()
     {
-		yield return new WaitForSecondsRealtime(spawnDelay);
+		yield return new WaitForSeconds(spawnDelay);
         //WaitForSecondsRealtime wfsr = new WaitForSecondsRealtime(spawnTime);
-        wfsr = new WaitForSecondsRealtime(spawnTime);
+        wfsr = new WaitForSeconds(spawnTime);
         while (true)
 		{
 			Spawn();
@@ -73,11 +73,6 @@ public class PipeSpawner : MonoBehaviour {
 		CancelInvoke("Spawn");
 	}
 
-	void ChangeVars(float ts)
-	{
-        spawnTime = startSpawnTime / ts;
-        wfsr = new WaitForSecondsRealtime(spawnTime);
-    }
     private void OnDestroy()
     {
 		//timeController.ChangeVarsByTimeScale -= ChangeVars;
