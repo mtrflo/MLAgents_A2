@@ -3,6 +3,7 @@ using System.Collections;
 using DG.Tweening;
 using System;
 using UnityEngine.SceneManagement;
+using static Unity.VisualScripting.Member;
 
 public class BirdControl : MonoBehaviour {
 
@@ -13,6 +14,7 @@ public class BirdControl : MonoBehaviour {
     public AudioClip jumpUp;
     public AudioClip hit;
     public AudioClip score;
+    public AudioSource a_source;
     public PipeSpawner pipeSpawner;
 
     public bool inGame = false;
@@ -26,10 +28,12 @@ public class BirdControl : MonoBehaviour {
 	public Action OnDie;
     public Action OnPipePassed;
 	private Animator animator;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        distances = new float[rayPoints.Length];
+
         OnDie = () => { };
         
         OnPipePassed = () => { };
@@ -37,6 +41,8 @@ public class BirdControl : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        startPos = transform.position;
+        startRot = transform.rotation;
         animator = GetComponent<Animator>();
         float birdOffset = 0.05f;
         float birdTime = 0.3f;
@@ -48,6 +54,8 @@ public class BirdControl : MonoBehaviour {
             .Append(transform.DOMoveY(birdStartY - 2 * birdOffset, 2 * birdTime).SetEase(Ease.Linear))
             .Append(transform.DOMoveY(birdStartY, birdTime).SetEase(Ease.Linear))
             .SetLoops(-1);
+        inGame = true;
+        JumpUp();
     }
 	
 	// Update is called once per frame
@@ -117,10 +125,32 @@ public class BirdControl : MonoBehaviour {
 
 	}
 
+    float[] distances;
+    public Transform[] rayPoints;
+    void UpdateRayDistances()
+    {
+        for (int i = 0; i < distances.Length; i++)
+            distances[i] = GetRayLength(rayPoints[i]);
+    }
+    private float GetRayLength(Transform point)
+    {
+        float dstns = -1;
+        RaycastHit2D hit = Physics2D.Raycast(point.transform.position, point.right, 10, ~LayerMask.GetMask("bird"));
+        if (hit.collider != null)
+        {
+            dstns = hit.distance;
+        }
+        return dstns;
+    }
+    public float[] GetDistances()
+    {
+        UpdateRayDistances();
+        return distances;
+    }
     public void JumpUp()
     {
         rb.velocity = new Vector2(0, upSpeed);
-        AudioSource.PlayClipAtPoint(jumpUp, Vector3.zero);
+        a_source.PlayOneShot(jumpUp);
     }
 	
 	public void GameOver()
@@ -145,5 +175,16 @@ public class BirdControl : MonoBehaviour {
     private void OnDestroy()
     {
         birdSequence.Kill();
+    }
+
+    Vector3 startPos;
+    Quaternion startRot;
+    public void ResetAgent()
+    {
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 1;
+        transform.position = startPos;
+        transform.rotation = startRot;
+        ResetComponent();
     }
 }
