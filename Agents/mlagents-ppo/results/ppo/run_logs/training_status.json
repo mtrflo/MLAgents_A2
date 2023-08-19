@@ -2,22 +2,58 @@
     "FlappyBird": {
         "checkpoints": [
             {
-                "steps": 11909,
-                "file_path": "results\\ppo\\FlappyBird\\FlappyBird-11909.onnx",
-                "reward": -0.9904203836325627,
-                "creation_time": 1692448701.2871103,
+                "steps": 3499961,
+                "file_path": "results\\ppo\\FlappyBird\\FlappyBird-3499961.onnx",
+                "reward": -0.5961851684583558,
+                "creation_time": 1692452275.3252437,
                 "auxillary_file_paths": [
-                    "results\\ppo\\FlappyBird\\FlappyBird-11909.pt"
+                    "results\\ppo\\FlappyBird\\FlappyBird-3499961.pt"
+                ]
+            },
+            {
+                "steps": 3999981,
+                "file_path": "results\\ppo\\FlappyBird\\FlappyBird-3999981.onnx",
+                "reward": null,
+                "creation_time": 1692452690.0810714,
+                "auxillary_file_paths": [
+                    "results\\ppo\\FlappyBird\\FlappyBird-3999981.pt"
+                ]
+            },
+            {
+                "steps": 4499963,
+                "file_path": "results\\ppo\\FlappyBird\\FlappyBird-4499963.onnx",
+                "reward": null,
+                "creation_time": 1692453093.5026202,
+                "auxillary_file_paths": [
+                    "results\\ppo\\FlappyBird\\FlappyBird-4499963.pt"
+                ]
+            },
+            {
+                "steps": 4999978,
+                "file_path": "results\\ppo\\FlappyBird\\FlappyBird-4999978.onnx",
+                "reward": -0.6944461451126979,
+                "creation_time": 1692453513.6865687,
+                "auxillary_file_paths": [
+                    "results\\ppo\\FlappyBird\\FlappyBird-4999978.pt"
+                ]
+            },
+            {
+                "steps": 5052099,
+                "file_path": "results\\ppo\\FlappyBird\\FlappyBird-5052099.onnx",
+                "reward": null,
+                "creation_time": 1692453555.8883946,
+                "auxillary_file_paths": [
+                    "results\\ppo\\FlappyBird\\FlappyBird-5052099.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 11909,
+            "steps": 5052099,
             "file_path": "results\\ppo\\FlappyBird.onnx",
-            "reward": -0.9904203836325627,
-            "creation_time": 1692448701.2871103,
+            "reward": null,
+            "creation_time": 1692453555.8883946,
             "auxillary_file_paths": [
-                "results\\ppo\\FlappyBird\\FlappyBird-11909.pt"
+                "results\\ppo\\FlappyBird\\FlappyBird-5052099.pt"
             ]
         }
     },

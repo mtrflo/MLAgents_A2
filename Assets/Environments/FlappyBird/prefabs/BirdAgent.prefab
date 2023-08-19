@@ -56,11 +56,6 @@ MonoBehaviour:
   epsilon: 0
   prefab_env: {fileID: 1850967208200856762, guid: 1387c40d2c6bd3947a79ce9f12666b5d, type: 3}
   pipeSpawner: {fileID: 0}
-  rayPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &2993686576834934668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,5 +98,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
-  TakeActionsBetweenDecisions: 1
+  DecisionPeriod: 3
+  TakeActionsBetweenDecisions: 0
