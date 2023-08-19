@@ -24,47 +24,7 @@ public class PendulumAgent : Agent
     }
     private void Start()
     {
-        //InvokeRepeating(nameof(End), 0, 10);
         Time.timeScale = 1;
-    }
-    // void End()
-    // {
-    //     EndEpisode();
-    // }
-
-    void ChooseAction()
-    {
-        //current_state.Clear();
-
-        //Vector3 toPo = (point.position - transform.position).normalized;
-        //float angle = Vector3.Angle(toPo, Vector3.up);
-        //float sign = MathF.Sign(point.position.x - transform.position.x);
-        //if(sign > 0)
-        //{
-        //    angle = 180 + (180 - angle);
-        //}
-        //angle = angle * Mathf.Deg2Rad;
-
-
-        //SetOb(Mathf.Sin(angle) / Mathf.PI * 2);
-        //AddObservation(Mathf.Cos(angle) / Mathf.PI * 2);
-        //float angvel = rb.angularVelocity.magnitude * Mathf.Sign(rb.angularVelocity.z);
-        //AddObservation(angvel / 4);
-
-
-        //if (prev_state.Count == 0)
-        //    Utils.CopyTo(current_state, prev_state);
-
-
-        //float s_reward = Mathf.Cos(angle);
-        //lastAngle = angle;
-
-        //_Transition.Set(prev_state.ToArray(), action, current_state.ToArray(), s_reward);
-        //Utils.CopyTo(current_state, prev_state);
-        //action = RLAlg.SelectAction(current_state.ToArray(), epsilon);
-        //MakeAction(action);
-        //Learn();
-        //episodeCount++;
     }
     void MakeAction(int action)
     {
