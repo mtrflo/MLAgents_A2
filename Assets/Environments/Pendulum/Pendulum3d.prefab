@@ -50,7 +50,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 50000000
+  MaxStep: 0
   rb: {fileID: 5960659438997838068}
   reward: 0.1
   terminateReward: -1
@@ -81,7 +81,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 38d755c6ef589ce42937c3ce2532d6eb, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Pendulum
