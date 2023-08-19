@@ -70,7 +70,7 @@ public class PendulumAgent : Agent
     {
         float torque = force;
         if (action == 1)
-            torque = -force;
+            torque = -force * Time.deltaTime;
 
         rb.AddTorque(0, 0, torque);
     }
