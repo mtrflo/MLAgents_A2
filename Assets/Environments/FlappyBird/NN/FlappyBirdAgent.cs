@@ -13,12 +13,11 @@ public class FlappyBirdAgent : Agent
     public static int birdsCount = 0;
     public BirdControl birdControl;
 
-    public float reward = 0.1f, terminateReward = -1f;
-
-    //public TimeController timeController;
-    public float epsilon;
+    public float reward = 0.1f, terminateReward = -1f, bonusReward;
+    public float lastReward = 0;
     public BirdEnv prefab_env;
     public PipeSpawner pipeSpawner;
+    private bool isPipePassed = false;
     void MakeAction(int action)
     {
         if (action == 1)
@@ -32,18 +31,27 @@ public class FlappyBirdAgent : Agent
         BirdEnv env = Instantiate(prefab_env,transform);
         birdControl = env.birdControl;
         pipeSpawner = env.pipeSpawner;
+        birdControl.OnPipePassed += () => { isPipePassed = true; };
+
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
         MakeAction(actions.DiscreteActions[0]);
-        SetReward(reward);
+        lastReward = reward;
+        if (isPipePassed)
+        {
+            lastReward = bonusReward;
+            isPipePassed = false;
+        }
 
         if (birdControl.dead)
         {
             SetReward(terminateReward);
             EndEpisode();
         }
+        else
+            SetReward(reward);
     }
     public override void CollectObservations(VectorSensor sensor)
     {

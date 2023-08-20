@@ -63,7 +63,7 @@ public class PipeSpawner : MonoBehaviour {
 
 	public void PipePassed()
 	{
-		pipeMoves.RemoveAt(0);
+		pipeMoves?.RemoveAt(0);
 		lastPipe = pipeMoves[0];
 
     }

@@ -58,7 +58,6 @@ public class BirdControl : MonoBehaviour {
         JumpUp();
     }
 	
-	// Update is called once per frame
 	void FixedUpdate () {
         if (!inGame)
         {
@@ -92,18 +91,12 @@ public class BirdControl : MonoBehaviour {
 	{
 		if (other.name == "land" || other.name == "pipe_up" || other.name == "pipe_down")
 		{
-            //if (other.name == "pipe_up" || other.name == "pipe_down")
-            //{
-            //    pipe = other.transform.parent.GetComponent<PipeMove>().nextPipe;
-            //    //Destroy(other.transform.parent.gameObject);
-            //}
             if (!dead)
             {
-                animator.SetTrigger("die");
+                //animator.SetTrigger("die");
 				GameOver();
 				OnDie();
             }
-			
 
 			if (other.name == "land")
 			{
@@ -118,11 +111,10 @@ public class BirdControl : MonoBehaviour {
         {
             scoreMgr.AddScore();
             pipeSpawner.PipePassed();
+            Scoring.me.NewScore(scoreMgr.currentScore);
             OnPipePassed();
             AudioSource.PlayClipAtPoint(score, Vector3.zero);
         }
-
-
 	}
 
     float[] distances;
@@ -156,13 +148,6 @@ public class BirdControl : MonoBehaviour {
 	public void GameOver()
 	{
 		dead = true;
-
-        //FlappyBirdAgent.birdsCount--;
-        //if (FlappyBirdAgent.birdsCount <= 0)
-        //{
-        //    FlappyBirdAgent.birdsCount = 0;
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //}
     }
 
     public void ResetComponent()

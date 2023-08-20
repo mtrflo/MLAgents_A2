@@ -53,7 +53,8 @@ MonoBehaviour:
   birdControl: {fileID: 0}
   reward: 0.001
   terminateReward: -1
-  epsilon: 0
+  bonusReward: 0.05
+  lastReward: 0
   prefab_env: {fileID: 1850967208200856762, guid: 1387c40d2c6bd3947a79ce9f12666b5d, type: 3}
   pipeSpawner: {fileID: 0}
 --- !u!114 &2993686576834934668
