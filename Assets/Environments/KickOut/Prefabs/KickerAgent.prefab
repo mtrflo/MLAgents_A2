@@ -43,7 +43,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1084514493785325763}
-  - component: {fileID: 2035192043566329625}
   m_Layer: 0
   m_Name: KickerAgent
   m_TagString: Untagged
@@ -67,22 +66,8 @@ Transform:
   - {fileID: 1084514494288254372}
   - {fileID: 1084514495274748775}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2035192043566329625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084514493785325764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98875ffc629dfc5419c6b2f76c25593a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kickOutEnv: {fileID: 0}
-  epsilon: 0
 --- !u!1 &1084514494288254373
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.25
-  epsilon: 0
   teamID: 0
   reward: -0.0001
   term_reward: -1
@@ -245,7 +229,7 @@ MonoBehaviour:
   env: {fileID: 0}
   episodeCount: 0
   arena: {fileID: 671512418388337597}
-  envcon: {fileID: 2035192043566329625}
+  envcon: {fileID: 0}
 --- !u!1 &1084514494316442179
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +591,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.25
-  epsilon: 0
   teamID: 0
   reward: -0.0001
   term_reward: -1
@@ -622,4 +605,4 @@ MonoBehaviour:
   env: {fileID: 0}
   episodeCount: 0
   arena: {fileID: 671512418388337597}
-  envcon: {fileID: 2035192043566329625}
+  envcon: {fileID: 0}

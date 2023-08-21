@@ -28,17 +28,21 @@ public class Kicker : MonoBehaviour
     public Arena arena;
     public EnvCon envcon;
 
-
+    Vector3 startLocPos;
+    private void Awake()
+    {
+        startLocPos = transform.localPosition;
+        
+    }
     void Start()
     {
-        env = envcon.kickOutEnv;
         arena.OnExit += (go) =>
         {
             isPlaying = false;
             win = !(go == rb.gameObject);
         };
     }
-    
+
     int PlayerChooseAction()
     {
         int action = 0;
@@ -73,7 +77,16 @@ public class Kicker : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical);
         rb.AddForce(movement * speed);
     }
+    public void ResetToStart()
+    {
+        //if (rb.velocity.magnitude > 0.01f)
+        //{
+            rb.velocity = Vector3.zero;
 
+            transform.localPosition = startLocPos;
+            isPlaying = true;
+        //}
+    }
 
     //private void OnCollisionEnter(Collision collision)
     //{

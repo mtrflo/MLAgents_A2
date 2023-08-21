@@ -1,0 +1,29 @@
+{
+    "Kicker": {
+        "checkpoints": [
+            {
+                "steps": 14172,
+                "file_path": "results\\kicker\\Kicker\\Kicker-14172.onnx",
+                "reward": -0.0017330146060799652,
+                "creation_time": 1692645836.3835115,
+                "auxillary_file_paths": [
+                    "results\\kicker\\Kicker\\Kicker-14172.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 14172,
+            "file_path": "results\\kicker\\Kicker.onnx",
+            "reward": -0.0017330146060799652,
+            "creation_time": 1692645836.3835115,
+            "auxillary_file_paths": [
+                "results\\kicker\\Kicker\\Kicker-14172.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -7,14 +7,10 @@ using UnityEngine;
 
 public class KickerAgent : Agent
 {
-    public KickOutEnv kickOutEnv;
-    Kicker kicker;
+    public Kicker kicker;
     public override void OnEpisodeBegin()
     {
-        if (transform.childCount > 0)
-            Destroy(transform.GetChild(0).gameObject);
-        KickOutEnv env = Instantiate(kickOutEnv, transform);
-        kicker = env.kicker;
+        kicker?.ResetToStart();
     }
 
     VectorSensor sensor;
@@ -38,8 +34,13 @@ public class KickerAgent : Agent
         kicker.MakeAction(actions.DiscreteActions[0]);
         float s_reward = kicker.isPlaying ? kicker.reward : (kicker.win ? kicker.win_reward : kicker.term_reward);
         SetReward(s_reward);
-    }
 
+        if (!kicker.isPlaying)
+            EndEpisode();
+    }
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+    }
     void AddObs(params float[] obs)
     {
         foreach (float item in obs)
