@@ -38,41 +38,22 @@ public class BirdControl : MonoBehaviour {
         
         OnPipePassed = () => { };
     }
+    Quaternion tartRot;
     // Use this for initialization
     void Start () {
 
         startPos = transform.position;
         startRot = transform.rotation;
         animator = GetComponent<Animator>();
-        float birdOffset = 0.05f;
-        float birdTime = 0.3f;
-        float birdStartY = transform.position.y;
+        tartRot = transform.rotation;
 
-        birdSequence = DOTween.Sequence();
 
-        birdSequence.Append(transform.DOMoveY(birdStartY + birdOffset, birdTime).SetEase(Ease.Linear))
-            .Append(transform.DOMoveY(birdStartY - 2 * birdOffset, 2 * birdTime).SetEase(Ease.Linear))
-            .Append(transform.DOMoveY(birdStartY, birdTime).SetEase(Ease.Linear))
-            .SetLoops(-1);
         inGame = true;
         JumpUp();
     }
 	
-	void FixedUpdate () {
-        if (!inGame)
-        {
-            return;
-        }
-        birdSequence.Kill();
-
-        if (!dead)
-		{
-			if (Input.GetButtonDown("Fire1"))
-			{
-                JumpUp();
-			}
-		}
-
+	void FixedUpdate () 
+    {
 		if (!landed)
 		{
 			float v = rb.velocity.y;
@@ -81,11 +62,11 @@ public class BirdControl : MonoBehaviour {
 			
 			transform.rotation = Quaternion.Euler(0f, 0f, rotate);
 		}
-		else
-		{
-			rb.rotation = -90;
-		}
-	}
+        //if (!dead && Input.GetButtonDown("Fire1"))
+        //{
+        //    JumpUp();
+        //}
+    }
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
@@ -102,8 +83,8 @@ public class BirdControl : MonoBehaviour {
 			{
                 rb.gravityScale = 0;
                 rb.velocity = new Vector2(0, 0);
-
-				landed = true;
+                rb.rotation = -90;
+                landed = true;
 			}
 		}
 
@@ -113,7 +94,7 @@ public class BirdControl : MonoBehaviour {
             pipeSpawner.PipePassed();
             Scoring.me.NewScore(scoreMgr.currentScore);
             OnPipePassed();
-            AudioSource.PlayClipAtPoint(score, Vector3.zero);
+            a_source.PlayOneShot(score);
         }
 	}
 
@@ -155,11 +136,6 @@ public class BirdControl : MonoBehaviour {
         animator.ResetTrigger("die");
         dead = false;
         landed = false;
-    }
-
-    private void OnDestroy()
-    {
-        birdSequence.Kill();
     }
 
     Vector3 startPos;

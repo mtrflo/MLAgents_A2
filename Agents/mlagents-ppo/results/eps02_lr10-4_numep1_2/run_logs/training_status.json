@@ -1,0 +1,38 @@
+{
+    "FlappyBird": {
+        "checkpoints": [
+            {
+                "steps": 499939,
+                "file_path": "results\\eps02_lr10-4_numep1_2\\FlappyBird\\FlappyBird-499939.onnx",
+                "reward": -0.8596199923753738,
+                "creation_time": 1692614558.2510219,
+                "auxillary_file_paths": [
+                    "results\\eps02_lr10-4_numep1_2\\FlappyBird\\FlappyBird-499939.pt"
+                ]
+            },
+            {
+                "steps": 501029,
+                "file_path": "results\\eps02_lr10-4_numep1_2\\FlappyBird\\FlappyBird-501029.onnx",
+                "reward": -0.8535156169673428,
+                "creation_time": 1692614569.008365,
+                "auxillary_file_paths": [
+                    "results\\eps02_lr10-4_numep1_2\\FlappyBird\\FlappyBird-501029.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 501029,
+            "file_path": "results\\eps02_lr10-4_numep1_2\\FlappyBird.onnx",
+            "reward": -0.8535156169673428,
+            "creation_time": 1692614569.008365,
+            "auxillary_file_paths": [
+                "results\\eps02_lr10-4_numep1_2\\FlappyBird\\FlappyBird-501029.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
