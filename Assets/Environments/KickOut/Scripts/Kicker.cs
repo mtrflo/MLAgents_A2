@@ -23,19 +23,17 @@ public class Kicker : MonoBehaviour
     public bool isPlaying = true;
     public bool win = false;
     public KickOutEnv env;
-    public int episodeCount;
-    public static int totalEpisodeCount;
     public Arena arena;
-    public EnvCon envcon;
+    public bool isFIrst;
 
     Vector3 startLocPos;
     private void Awake()
     {
-        startLocPos = transform.localPosition;
-        
+
     }
     void Start()
     {
+        startLocPos = transform.localPosition;
         arena.OnExit += (go) =>
         {
             isPlaying = false;
@@ -75,17 +73,14 @@ public class Kicker : MonoBehaviour
 
         // move the bot
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical);
-        rb.AddForce(movement * speed);
+        rb.AddForce(movement * speed * Time.deltaTime);
     }
     public void ResetToStart()
     {
-        //if (rb.velocity.magnitude > 0.01f)
-        //{
-            rb.velocity = Vector3.zero;
-
-            transform.localPosition = startLocPos;
-            isPlaying = true;
-        //}
+        rb.velocity = Vector3.zero;
+        Vector3 rp = arena.randomPos;
+        transform.localPosition = isFIrst ? rp : -rp;
+        isPlaying = true;
     }
 
     //private void OnCollisionEnter(Collision collision)

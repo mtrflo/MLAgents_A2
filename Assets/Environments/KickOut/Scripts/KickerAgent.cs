@@ -34,7 +34,7 @@ public class KickerAgent : Agent
         kicker.MakeAction(actions.DiscreteActions[0]);
         float s_reward = kicker.isPlaying ? kicker.reward : (kicker.win ? kicker.win_reward : kicker.term_reward);
         SetReward(s_reward);
-        print("reward : " + s_reward);
+        //print("reward : " + s_reward);
         if (!kicker.isPlaying)
             EndEpisode();
     }
