@@ -41,13 +41,13 @@ behaviors:
     time_horizon: 64
     summary_freq: 50000
     threaded: false
-    self_play: 
+    self_play:
       save_steps: 50000
       team_change: 100000
       swap_steps: 2000
       window: 10
       play_against_latest_model_ratio: 0.5
-      initial_elo: 1200.0 
+      initial_elo: 1200.0
     behavioral_cloning: null
 env_settings:
   env_path: null
@@ -63,13 +63,13 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 1
+  time_scale: 1.0
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: ppo
+  run_id: selfp
   initialize_from: null
   load_model: false
   resume: false
