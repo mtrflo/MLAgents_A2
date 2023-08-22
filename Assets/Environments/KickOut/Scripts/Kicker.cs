@@ -43,7 +43,7 @@ public class Kicker : MonoBehaviour
         };
     }
 
-    int PlayerChooseAction()
+    public int PlayerChooseAction()
     {
         int action = 0;
         if (Input.GetKey(KeyCode.LeftArrow))

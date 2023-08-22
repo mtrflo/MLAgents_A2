@@ -1,0 +1,30 @@
+{
+    "Kicker": {
+        "elo": 1186.0145220235872,
+        "checkpoints": [
+            {
+                "steps": 239,
+                "file_path": "results\\spt2\\Kicker\\Kicker-239.onnx",
+                "reward": -1.0016071370669775,
+                "creation_time": 1692685788.034496,
+                "auxillary_file_paths": [
+                    "results\\spt2\\Kicker\\Kicker-239.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 239,
+            "file_path": "results\\spt2\\Kicker.onnx",
+            "reward": -1.0016071370669775,
+            "creation_time": 1692685788.034496,
+            "auxillary_file_paths": [
+                "results\\spt2\\Kicker\\Kicker-239.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -34,12 +34,14 @@ public class KickerAgent : Agent
         kicker.MakeAction(actions.DiscreteActions[0]);
         float s_reward = kicker.isPlaying ? kicker.reward : (kicker.win ? kicker.win_reward : kicker.term_reward);
         SetReward(s_reward);
-
+        print("reward : " + s_reward);
         if (!kicker.isPlaying)
             EndEpisode();
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        ActionSegment<int> discAct = actionsOut.DiscreteActions;
+        discAct[0] = kicker.PlayerChooseAction();
     }
     void AddObs(params float[] obs)
     {

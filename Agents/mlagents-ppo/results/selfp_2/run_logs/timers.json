@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1692684632",
+        "python_version": "3.8.17 (default, Jul  5 2023, 20:44:21) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "E:\\Programs\\Anaconda\\envs\\ml-agents\\Scripts\\mlagents-learn kicker.yaml --run-id=selfp_2",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1692684639"
+    },
+    "total": 7.769576500000001,
+    "count": 1,
+    "self": 0.010497200000001428,
+    "children": {
+        "run_training.setup": {
+            "total": 0.09842799999999996,
+            "count": 1,
+            "self": 0.09842799999999996
+        },
+        "TrainerController.start_learning": {
+            "total": 7.6606513,
+            "count": 1,
+            "self": 9.53999999993016e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 5.098603300000001,
+                    "count": 1,
+                    "self": 5.098603300000001
+                },
+                "TrainerController._save_models": {
+                    "total": 2.5619525999999997,
+                    "count": 1,
+                    "self": 0.0009643999999999764,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 2.5609881999999997,
+                            "count": 1,
+                            "self": 2.5609881999999997
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
