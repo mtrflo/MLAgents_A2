@@ -298,11 +298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3673879369261796963, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: speed
-      value: 640
+      value: 5120
       objectReference: {fileID: 0}
     - target: {fileID: 3673879369261796963, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: bounce
-      value: 800
+      value: 6400
       objectReference: {fileID: 0}
     - target: {fileID: 3673879369261796963, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: isFIrst
@@ -310,11 +310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909259895067111300, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: speed
-      value: 640
+      value: 5120
       objectReference: {fileID: 0}
     - target: {fileID: 4909259895067111300, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: bounce
-      value: 800
+      value: 6400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

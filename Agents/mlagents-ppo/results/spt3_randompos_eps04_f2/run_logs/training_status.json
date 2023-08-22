@@ -1,0 +1,39 @@
+{
+    "Kicker": {
+        "checkpoints": [
+            {
+                "steps": 499952,
+                "file_path": "results\\spt3_randompos_eps04_f2\\Kicker\\Kicker-499952.onnx",
+                "reward": 0.17544285614664357,
+                "creation_time": 1692695210.1750305,
+                "auxillary_file_paths": [
+                    "results\\spt3_randompos_eps04_f2\\Kicker\\Kicker-499952.pt"
+                ]
+            },
+            {
+                "steps": 583237,
+                "file_path": "results\\spt3_randompos_eps04_f2\\Kicker\\Kicker-583237.onnx",
+                "reward": 0.15011742990463972,
+                "creation_time": 1692695292.7286952,
+                "auxillary_file_paths": [
+                    "results\\spt3_randompos_eps04_f2\\Kicker\\Kicker-583237.pt"
+                ]
+            }
+        ],
+        "elo": 1351.1640025282302,
+        "final_checkpoint": {
+            "steps": 583237,
+            "file_path": "results\\spt3_randompos_eps04_f2\\Kicker.onnx",
+            "reward": 0.15011742990463972,
+            "creation_time": 1692695292.7286952,
+            "auxillary_file_paths": [
+                "results\\spt3_randompos_eps04_f2\\Kicker\\Kicker-583237.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
