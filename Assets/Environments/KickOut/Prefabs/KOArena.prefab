@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 3
+  DecisionPeriod: 1
   TakeActionsBetweenDecisions: 0
 --- !u!1 &4023668064572307856
 GameObject:
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 3
+  DecisionPeriod: 1
   TakeActionsBetweenDecisions: 0
 --- !u!1001 &3268200479265119945
 PrefabInstance:
@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3673879369261796963, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: speed
-      value: 5120
+      value: 2560
       objectReference: {fileID: 0}
     - target: {fileID: 3673879369261796963, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: bounce
@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909259895067111300, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: speed
-      value: 5120
+      value: 2560
       objectReference: {fileID: 0}
     - target: {fileID: 4909259895067111300, guid: 18c2dd5a706808d47bcc7a6ebae1e65f, type: 3}
       propertyPath: bounce
