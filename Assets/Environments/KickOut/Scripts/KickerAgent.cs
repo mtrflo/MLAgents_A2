@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KickerAgent : Agent
@@ -34,7 +35,7 @@ public class KickerAgent : Agent
         kicker.MakeAction(actions.DiscreteActions[0]);
         float s_reward = kicker.isPlaying ? kicker.reward : (kicker.win ? kicker.win_reward : kicker.term_reward);
         SetReward(s_reward);
-        //print("reward : " + s_reward);
+        print(kicker.name + " : reward : " + s_reward);
         if (!kicker.isPlaying)
             EndEpisode();
     }
@@ -45,6 +46,7 @@ public class KickerAgent : Agent
     }
     void AddObs(params float[] obs)
     {
+        print(kicker.name + " : "+obs.ToCommaSeparatedString());
         foreach (float item in obs)
         {
             sensor.AddObservation(item);
