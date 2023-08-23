@@ -79,6 +79,8 @@ public class Kicker : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         Vector3 rp = arena.randomPos;
+        rp = isFIrst ? rp : -rp;
+        rp.y = 1;
         transform.localPosition = isFIrst ? rp : -rp;
         isPlaying = true;
     }

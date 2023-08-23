@@ -21,7 +21,7 @@ public class KickerAgent : Agent
             kicker.rb.transform.localPosition.x,
             kicker.rb.transform.localPosition.z,
             kicker.rb.velocity.x,
-            kicker.rb.velocity.y,
+            kicker.rb.velocity.z,
             kicker.enemyRB.transform.localPosition.x,
             kicker.enemyRB.transform.localPosition.z,
             kicker.enemyRB.velocity.x,
