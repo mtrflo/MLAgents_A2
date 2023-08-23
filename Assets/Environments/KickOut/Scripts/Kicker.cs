@@ -17,7 +17,7 @@ public class Kicker : MonoBehaviour
 
 
     public bool IsAgent = true;
-    public float speed, bounce = 10; // speed of the bot movement
+    public float speed; // speed of the bot movement
     public Rigidbody rb;
     public Rigidbody enemyRB;
     public bool isPlaying = true;
