@@ -32,10 +32,11 @@ public class KickerAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
+        // print(kicker.name + " action: " + actions.DiscreteActions[0]);
         kicker.MakeAction(actions.DiscreteActions[0]);
         float s_reward = kicker.isPlaying ? kicker.reward : (kicker.win ? kicker.win_reward : kicker.term_reward);
         SetReward(s_reward);
-        print(kicker.name + " : reward : " + s_reward);
+        // print(kicker.name + " : reward : " + s_reward);
         if (!kicker.isPlaying)
             EndEpisode();
     }
@@ -46,7 +47,7 @@ public class KickerAgent : Agent
     }
     void AddObs(params float[] obs)
     {
-        print(kicker.name + " : "+obs.ToCommaSeparatedString());
+        // print(kicker.name + " : " + obs.ToCommaSeparatedString());
         foreach (float item in obs)
         {
             sensor.AddObservation(item);
