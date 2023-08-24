@@ -18,7 +18,7 @@ public class Arena : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //print("arena exit : "+ other.tag);
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(k1.tag) || other.CompareTag(k2.tag))
         {
             OnExit.Invoke(other.gameObject);
             //env.Restart();

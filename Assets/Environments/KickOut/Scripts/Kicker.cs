@@ -9,27 +9,21 @@ using UnityEngine.XR;
 
 public class Kicker : MonoBehaviour
 {
-    public float delay;
-    public int teamID;
-
-
     public float reward, term_reward, win_reward;
 
 
-    public bool IsAgent = true;
     public float speed; // speed of the bot movement
     public Rigidbody rb;
     public Rigidbody enemyRB;
     public bool isPlaying = true;
     public bool win = false;
-    public KickOutEnv env;
     public Arena arena;
     public bool isFIrst;
 
     Vector3 startLocPos;
     private void Awake()
     {
-
+        startLocPos = transform.localPosition;
     }
     void Start()
     {
@@ -77,10 +71,14 @@ public class Kicker : MonoBehaviour
     }
     public void ResetToStart()
     {
+        //reset physics
         rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        
+        //Reset locaLpos
         Vector3 rp = arena.randomPos;
         rp = isFIrst ? rp : -rp;
-        rp.y = 1;
+        rp.y = startLocPos.y;
         transform.localPosition = rp;
         isPlaying = true;
     }
