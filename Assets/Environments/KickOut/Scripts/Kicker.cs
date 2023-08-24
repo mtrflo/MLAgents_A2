@@ -55,13 +55,13 @@ public class Kicker : MonoBehaviour
         float vertical = 0.0f;
         switch (i)
         {
-            case 1:
+            case 0:
                 horizontal = -1.0f; break;
-            case 2:
+            case 1:
                 horizontal = 1.0f; break;
-            case 3:
+            case 2:
                 vertical = -1.0f; break;
-            case 4:
+            case 3:
                 vertical = 1.0f; break;
         }
 
