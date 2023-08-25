@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731aa8977d9bf324c9ec7ede1c246c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 100
+  count: 20
   env: {fileID: 5382300994404929282, guid: e2f08349d489ddd44a59ebba73f8651b, type: 3}
   ins_parent: {fileID: 642590858}
   space: 8

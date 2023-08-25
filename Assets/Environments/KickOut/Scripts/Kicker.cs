@@ -37,24 +37,26 @@ public class Kicker : MonoBehaviour
 
     public int PlayerChooseAction()
     {
-        int action = -1;
+        int action = 0;
+        #region
         if (Input.GetKey(KeyCode.LeftArrow))
-            action = 0;
-        if (Input.GetKey(KeyCode.RightArrow))
             action = 1;
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
             action = 2;
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
             action = 3;
-        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
             action = 4;
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow))
+        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.DownArrow))
             action = 5;
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow))
             action = 6;
-        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.DownArrow))
             action = 7;
-        //MakeAction(action);
+        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow))
+            action = 8;
+        #endregion input
+        MakeAction(action);
         return action;
     }
     Vector3 movement = Vector3.zero;
@@ -66,43 +68,49 @@ public class Kicker : MonoBehaviour
         switch (i)
         {
             case 0:
-                horizontal = -1.0f; break;
+                horizontal = 0;
+                vertical = 0;
+                break;
             case 1:
-                horizontal = 1.0f; break;
+                horizontal = -1.0f; break;
             case 2:
-                vertical = -1.0f; break;
+                horizontal = 1.0f; break;
             case 3:
-                vertical = 1.0f; break;
+                vertical = -1.0f; break;
             case 4:
+                vertical = 1.0f; break;
+            case 5:
                 horizontal = 1;
                 vertical = -1;
                 break;
-            case 5:
+            case 6:
                 horizontal = -1;
                 vertical = 1;
                 break;
-            case 6:
+            case 7:
                 horizontal = -1;
                 vertical = -1;
                 break;
-            case 7:
+            case 8:
                 horizontal = 1;
                 vertical = 1;
                 break;
         }
         movement = new Vector3(horizontal, 0.0f, vertical);
         isNewAction = true;
+        rb.AddForce(movement * speed);
+
         // move the bot
 
     }
-    private void FixedUpdate()
-    {
-        if (isNewAction)
-        {
-            rb.AddForce(movement * speed);
-            isNewAction = false;
-        }
-    }
+    //private void FixedUpdate()
+    //{
+    //    if (isNewAction)
+    //    {
+    //        rb.AddForce(movement * speed);
+    //        isNewAction = false;
+    //    }
+    //}
     public void ResetToStart()
     {
         //reset physics

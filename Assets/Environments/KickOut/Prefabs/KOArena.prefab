@@ -51,13 +51,13 @@ MonoBehaviour:
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 08000000
-    VectorActionSize: 08000000
+      BranchSizes: 09000000
+    VectorActionSize: 09000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
-  m_InferenceDevice: 2
+  m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: Kicker
   TeamId: 1
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 1
+  DecisionPeriod: 6
   TakeActionsBetweenDecisions: 0
 --- !u!1 &1900590159972853310
 GameObject:
@@ -546,13 +546,13 @@ MonoBehaviour:
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 08000000
-    VectorActionSize: 08000000
+      BranchSizes: 09000000
+    VectorActionSize: 09000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
-  m_InferenceDevice: 2
+  m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: Kicker
   TeamId: 2
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 1
+  DecisionPeriod: 6
   TakeActionsBetweenDecisions: 0
 --- !u!1 &4391335034576354425
 GameObject:

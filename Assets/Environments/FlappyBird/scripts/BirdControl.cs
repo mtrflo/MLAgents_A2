@@ -66,14 +66,14 @@ public class BirdControl : MonoBehaviour {
 			transform.rotation = Quaternion.Euler(0f, 0f, rotate);
 		}
 
-        if (isNewAction)
-        {
-            if (lastAction > 0)
-            {
-                JumpUp();
-            }
-            isNewAction = false;
-        }
+        //if (isNewAction)
+        //{
+        //    if (lastAction > 0)
+        //    {
+        //        JumpUp();
+        //    }
+        //    isNewAction = false;
+        //}
         //if (!dead && Input.GetButtonDown("Fire1"))
         //{
         //    JumpUp();
@@ -83,6 +83,10 @@ public class BirdControl : MonoBehaviour {
     {
         isNewAction = true;
         lastAction = action;
+        if (action > 0)
+        {
+            JumpUp();
+        }
     }
     void OnTriggerEnter2D (Collider2D other)
 	{
