@@ -51,8 +51,8 @@ MonoBehaviour:
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 04000000
-    VectorActionSize: 04000000
+      BranchSizes: 08000000
+    VectorActionSize: 08000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
@@ -241,10 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5542ace04926a534e9844edb7d8ef0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: -0.0001
+  reward: -0.001
   term_reward: -1
   win_reward: 1
-  speed: 2560
+  speed: 22
   rb: {fileID: 3938507978426890892}
   enemyRB: {fileID: 6749780182193692116}
   isPlaying: 1
@@ -546,8 +546,8 @@ MonoBehaviour:
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 04000000
-    VectorActionSize: 04000000
+      BranchSizes: 08000000
+    VectorActionSize: 08000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
@@ -804,10 +804,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5542ace04926a534e9844edb7d8ef0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: -0.0001
+  reward: -0.001
   term_reward: -1
   win_reward: 1
-  speed: 2560
+  speed: 22
   rb: {fileID: 6749780182193692116}
   enemyRB: {fileID: 3938507978426890892}
   isPlaying: 1

@@ -37,18 +37,28 @@ public class Kicker : MonoBehaviour
 
     public int PlayerChooseAction()
     {
-        int action = 0;
+        int action = -1;
         if (Input.GetKey(KeyCode.LeftArrow))
-            action = 1;
+            action = 0;
         if (Input.GetKey(KeyCode.RightArrow))
-            action = 2;
+            action = 1;
         if (Input.GetKey(KeyCode.DownArrow))
-            action = 3;
+            action = 2;
         if (Input.GetKey(KeyCode.UpArrow))
+            action = 3;
+        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.DownArrow))
             action = 4;
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow))
+            action = 5;
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.DownArrow))
+            action = 6;
+        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow))
+            action = 7;
         //MakeAction(action);
         return action;
     }
+    Vector3 movement = Vector3.zero;
+    bool isNewAction = false;
     public void MakeAction(int i)
     {
         float horizontal = 0.0f;
@@ -63,11 +73,35 @@ public class Kicker : MonoBehaviour
                 vertical = -1.0f; break;
             case 3:
                 vertical = 1.0f; break;
+            case 4:
+                horizontal = 1;
+                vertical = -1;
+                break;
+            case 5:
+                horizontal = -1;
+                vertical = 1;
+                break;
+            case 6:
+                horizontal = -1;
+                vertical = -1;
+                break;
+            case 7:
+                horizontal = 1;
+                vertical = 1;
+                break;
         }
-
+        movement = new Vector3(horizontal, 0.0f, vertical);
+        isNewAction = true;
         // move the bot
-        Vector3 movement = new Vector3(horizontal, 0.0f, vertical);
-        rb.AddForce(movement * speed * Time.deltaTime);
+
+    }
+    private void FixedUpdate()
+    {
+        if (isNewAction)
+        {
+            rb.AddForce(movement * speed);
+            isNewAction = false;
+        }
     }
     public void ResetToStart()
     {
