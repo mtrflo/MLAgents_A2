@@ -4,6 +4,8 @@ using DG.Tweening;
 using System;
 using UnityEngine.SceneManagement;
 using static Unity.VisualScripting.Member;
+using UnityEngine.PlayerLoop;
+using Unity.VisualScripting;
 
 public class BirdControl : MonoBehaviour {
 
@@ -23,7 +25,6 @@ public class BirdControl : MonoBehaviour {
 
 	private bool landed = false;
 
-    private Sequence birdSequence;
 
 	public Action OnDie;
     public Action OnPipePassed;
@@ -51,7 +52,9 @@ public class BirdControl : MonoBehaviour {
         inGame = true;
         JumpUp();
     }
-	
+
+    bool isNewAction = false;
+    public int lastAction = -1;
 	void FixedUpdate () 
     {
 		if (!landed)
@@ -62,13 +65,26 @@ public class BirdControl : MonoBehaviour {
 			
 			transform.rotation = Quaternion.Euler(0f, 0f, rotate);
 		}
+
+        if (isNewAction)
+        {
+            if (lastAction > 0)
+            {
+                JumpUp();
+            }
+            isNewAction = false;
+        }
         //if (!dead && Input.GetButtonDown("Fire1"))
         //{
         //    JumpUp();
         //}
     }
-
-	void OnTriggerEnter2D (Collider2D other)
+    public void MakeAction(int action)
+    {
+        isNewAction = true;
+        lastAction = action;
+    }
+    void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.name == "land" || other.name == "pipe_up" || other.name == "pipe_down")
 		{

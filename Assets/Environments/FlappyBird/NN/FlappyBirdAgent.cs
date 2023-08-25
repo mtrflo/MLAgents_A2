@@ -18,11 +18,7 @@ public class FlappyBirdAgent : Agent
     public BirdEnv prefab_env;
     public PipeSpawner pipeSpawner;
     private bool isPipePassed = false;
-    void MakeAction(int action)
-    {
-        if (action == 1)
-            birdControl.JumpUp();
-    }
+    
 
     public override void OnEpisodeBegin()
     {
@@ -37,7 +33,7 @@ public class FlappyBirdAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        MakeAction(actions.DiscreteActions[0]);
+        birdControl.MakeAction(actions.DiscreteActions[0]);
         lastReward = reward;
         if (isPipePassed)
         {
