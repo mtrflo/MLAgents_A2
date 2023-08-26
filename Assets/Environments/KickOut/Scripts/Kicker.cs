@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
@@ -35,67 +36,53 @@ public class Kicker : MonoBehaviour
         };
     }
 
-    public int PlayerChooseAction()
+    public Vector2Int PlayerChooseAction()
     {
-        int action = 0;
+        Vector2Int dir = Vector2Int.zero;
         #region
-        if (Input.GetKey(KeyCode.LeftArrow))
-            action = 1;
         if (Input.GetKey(KeyCode.RightArrow))
-            action = 2;
-        if (Input.GetKey(KeyCode.DownArrow))
-            action = 3;
+            dir.x = 1;
+        if (Input.GetKey(KeyCode.LeftArrow))
+            dir.x= 2;
         if (Input.GetKey(KeyCode.UpArrow))
-            action = 4;
-        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.DownArrow))
-            action = 5;
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow))
-            action = 6;
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.DownArrow))
-            action = 7;
-        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow))
-            action = 8;
+            dir.y = 1;
+        if (Input.GetKey(KeyCode.DownArrow))
+            dir.y = 2;
         #endregion input
-        MakeAction(action);
-        return action;
+        //MakeAction(x, y);
+        return dir;
     }
     Vector3 movement = Vector3.zero;
     bool isNewAction = false;
-    public void MakeAction(int i)
+    public void MakeAction(int x, int y)
     {
         float horizontal = 0.0f;
         float vertical = 0.0f;
-        switch (i)
+        switch (x)
         {
             case 0:
-                horizontal = 0;
+                horizontal = 0; 
+                break;
+            case 1:
+                horizontal = 1;
+                break;
+            case 2:
+                horizontal = -1;
+                break;
+        }
+        switch (y)
+        {
+            case 0:
                 vertical = 0;
                 break;
             case 1:
-                horizontal = -1.0f; break;
+                vertical = 1;
+                break;
             case 2:
-                horizontal = 1.0f; break;
-            case 3:
-                vertical = -1.0f; break;
-            case 4:
-                vertical = 1.0f; break;
-            case 5:
-                horizontal = 1;
                 vertical = -1;
-                break;
-            case 6:
-                horizontal = -1;
-                vertical = 1;
-                break;
-            case 7:
-                horizontal = -1;
-                vertical = -1;
-                break;
-            case 8:
-                horizontal = 1;
-                vertical = 1;
                 break;
         }
+        
         movement = new Vector3(horizontal, 0.0f, vertical);
         isNewAction = true;
         rb.AddForce(movement * speed);

@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731aa8977d9bf324c9ec7ede1c246c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 120
+  count: 40
   env: {fileID: 4023668064572307856, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
   ins_parent: {fileID: 642590858}
   space: 25
