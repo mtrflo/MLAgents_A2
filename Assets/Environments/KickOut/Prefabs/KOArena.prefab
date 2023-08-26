@@ -244,7 +244,7 @@ MonoBehaviour:
   reward: -0.0001
   term_reward: -1
   win_reward: 1
-  speed: 40
+  speed: 80
   rb: {fileID: 3938507978426890892}
   enemyRB: {fileID: 6749780182193692116}
   isPlaying: 1
@@ -807,7 +807,7 @@ MonoBehaviour:
   reward: -0.0001
   term_reward: -1
   win_reward: 1
-  speed: 40
+  speed: 80
   rb: {fileID: 6749780182193692116}
   enemyRB: {fileID: 3938507978426890892}
   isPlaying: 1

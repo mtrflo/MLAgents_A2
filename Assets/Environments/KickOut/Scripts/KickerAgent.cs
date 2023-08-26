@@ -46,12 +46,12 @@ public class KickerAgent : Agent
     {
         ActionSegment<int> discAct = actionsOut.DiscreteActions;
         Vector2Int dir = kicker.PlayerChooseAction();
-        print("x : " + dir.x);
-        print("y : " + dir.y);
+        // print("x : " + dir.x);
+        // print("y : " + dir.y);
         discAct[0] = dir.x;
         discAct[1] = dir.y;
-        print("discAct[0] : "+ discAct[0]);
-        print("discAct[1] : "+ discAct[1]);
+        // print("discAct[0] : "+ discAct[0]);
+        // print("discAct[1] : "+ discAct[1]);
     }
     void AddObs(params float[] obs)
     {
