@@ -324,7 +324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &642590857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,10 +424,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7551087480590077458, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: boostForceMltpy
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8783428474303009695, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5022602860645237092, guid: fd0dde98d3fde04439bd7e63a2de6027, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -452,7 +456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1375924399
 MonoBehaviour:
   m_ObjectHideFlags: 0

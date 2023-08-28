@@ -51,8 +51,8 @@ MonoBehaviour:
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 0300000003000000
-    VectorActionSize: 0300000003000000
+      BranchSizes: 030000000300000002000000
+    VectorActionSize: 030000000300000002000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
@@ -245,12 +245,15 @@ MonoBehaviour:
   term_reward: -1
   win_reward: 1
   speed: 80
+  boostForceMltpy: 5
+  boostCooldown: 4
   rb: {fileID: 3938507978426890892}
   enemyRB: {fileID: 6749780182193692116}
   isPlaying: 1
   win: 0
   arena: {fileID: 2597253145966361972}
   isFIrst: 1
+  canUseBoost: 1
 --- !u!1 &2339841444406230119
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,8 +549,8 @@ MonoBehaviour:
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 0300000003000000
-    VectorActionSize: 0300000003000000
+      BranchSizes: 030000000300000002000000
+    VectorActionSize: 030000000300000002000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
@@ -808,12 +811,15 @@ MonoBehaviour:
   term_reward: -1
   win_reward: 1
   speed: 80
+  boostForceMltpy: 5
+  boostCooldown: 4
   rb: {fileID: 6749780182193692116}
   enemyRB: {fileID: 3938507978426890892}
   isPlaying: 1
   win: 0
   arena: {fileID: 2597253145966361972}
   isFIrst: 0
+  canUseBoost: 1
 --- !u!1 &6503579355299505948
 GameObject:
   m_ObjectHideFlags: 0

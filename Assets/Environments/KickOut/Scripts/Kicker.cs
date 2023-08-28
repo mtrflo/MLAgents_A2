@@ -13,7 +13,8 @@ public class Kicker : MonoBehaviour
     public float reward, term_reward, win_reward;
 
 
-    public float speed; // speed of the bot movement
+    public float speed, boostForceMltpy = 2; // speed of the bot movement
+    public float boostCooldown = 4;
     public Rigidbody rb;
     public Rigidbody enemyRB;
     public bool isPlaying = true;
@@ -21,6 +22,7 @@ public class Kicker : MonoBehaviour
     public Arena arena;
     public bool isFIrst;
 
+    public bool canUseBoost = true;
     Vector3 startLocPos;
     private void Awake()
     {
@@ -36,29 +38,30 @@ public class Kicker : MonoBehaviour
         };
     }
 
-    public Vector2Int PlayerChooseAction()
+    public int[] PlayerChooseAction()
     {
-        Vector2Int dir = Vector2Int.zero;
+        int[] playerActions = new int[3];
         #region
         if (Input.GetKey(KeyCode.RightArrow))
-            dir.x = 1;
+            playerActions[0] = 1;
         if (Input.GetKey(KeyCode.LeftArrow))
-            dir.x= 2;
+            playerActions[0] = 2;
         if (Input.GetKey(KeyCode.UpArrow))
-            dir.y = 1;
+            playerActions[1] = 1;
         if (Input.GetKey(KeyCode.DownArrow))
-            dir.y = 2;
+            playerActions[1] = 2;
+        if (Input.GetKey(KeyCode.Space))
+            playerActions[2] = 1;
         #endregion input
-        //MakeAction(x, y);
-        return dir;
+        return playerActions;
     }
     Vector3 movement = Vector3.zero;
-    bool isNewAction = false;
-    public void MakeAction(int x, int y)
+    public void MakeAction(int[] actions)
     {
         float horizontal = 0.0f;
         float vertical = 0.0f;
-        switch (x)
+        // horizontal
+        switch (actions[0])
         {
             case 0:
                 horizontal = 0; 
@@ -70,7 +73,8 @@ public class Kicker : MonoBehaviour
                 horizontal = -1;
                 break;
         }
-        switch (y)
+        // vertical
+        switch (actions[1])
         {
             case 0:
                 vertical = 0;
@@ -84,11 +88,22 @@ public class Kicker : MonoBehaviour
         }
         
         movement = new Vector3(horizontal, 0.0f, vertical);
-        isNewAction = true;
+        if (actions[2] == 1 && canUseBoost)
+        {
+            movement *= boostForceMltpy;
+            canUseBoost = false;
+            Invoke(nameof(BoostTimer), boostCooldown);
+        }
+
+        
         rb.AddForce(movement * speed);
 
         // move the bot
 
+    }
+    void BoostTimer()
+    {
+        canUseBoost = true;
     }
     //private void FixedUpdate()
     //{

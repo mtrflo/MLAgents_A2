@@ -35,7 +35,8 @@ public class KickerAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         // print(kicker.name + " action: " + actions.DiscreteActions[0]);
-        kicker.MakeAction(actions.DiscreteActions[0], actions.DiscreteActions[1]);
+        int[] d_actions = { actions.DiscreteActions[0] , actions.DiscreteActions[1] , actions.DiscreteActions[2] };
+        kicker.MakeAction(d_actions);
         float s_reward = kicker.isPlaying ? kicker.reward : (kicker.win ? kicker.win_reward : kicker.term_reward);
         SetReward(s_reward);
         // print(kicker.name + " : reward : " + s_reward);
@@ -45,13 +46,10 @@ public class KickerAgent : Agent
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         ActionSegment<int> discAct = actionsOut.DiscreteActions;
-        Vector2Int dir = kicker.PlayerChooseAction();
-        // print("x : " + dir.x);
-        // print("y : " + dir.y);
-        discAct[0] = dir.x;
-        discAct[1] = dir.y;
-        // print("discAct[0] : "+ discAct[0]);
-        // print("discAct[1] : "+ discAct[1]);
+        int[] dir = kicker.PlayerChooseAction();
+        discAct[0] = dir[0];
+        discAct[1] = dir[1];
+        discAct[2] = dir[2];
     }
     void AddObs(params float[] obs)
     {
