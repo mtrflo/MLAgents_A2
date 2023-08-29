@@ -88,6 +88,7 @@ public class Kicker : MonoBehaviour
         }
         
         movement = new Vector3(horizontal, 0.0f, vertical);
+        movement *= speed;
         if (actions[2] == 1 && canUseBoost)
         {
             movement *= boostForceMltpy;
@@ -96,7 +97,7 @@ public class Kicker : MonoBehaviour
         }
 
         
-        rb.AddForce(movement * speed);
+        rb.AddForce(movement);
 
         // move the bot
 
@@ -125,6 +126,8 @@ public class Kicker : MonoBehaviour
         rp.y = startLocPos.y;
         transform.localPosition = rp;
         isPlaying = true;
+        CancelInvoke(nameof(BoostTimer));
+        canUseBoost = true;
     }
 
     //private void OnCollisionEnter(Collision collision)
