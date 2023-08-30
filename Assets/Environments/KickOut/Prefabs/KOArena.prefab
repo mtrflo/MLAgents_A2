@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 9
+    VectorObservationSize: 10
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5542ace04926a534e9844edb7d8ef0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: -0.0001
+  reward: 0
   term_reward: -1
   win_reward: 1
   speed: 80
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 9
+    VectorObservationSize: 10
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5542ace04926a534e9844edb7d8ef0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: -0.0001
+  reward: 0
   term_reward: -1
   win_reward: 1
   speed: 80

@@ -13,7 +13,7 @@ public class Kicker : MonoBehaviour
     public float reward, term_reward, win_reward;
 
 
-    public float speed, boostForceMltpy = 2; // speed of the bot movement
+    public float speed, boostForceMltpy = 2,bounce = 2; // speed of the bot movement
     public float boostCooldown = 4;
     public Rigidbody rb;
     public Rigidbody enemyRB;
@@ -140,7 +140,7 @@ public class Kicker : MonoBehaviour
     //        //rb.velocity = collision.rigidbody.velocity;
     //        //rb.AddForce(dir * ( rb.velocity.magnitude + collision.rigidbody.velocity.magnitude ) * speed * bounce);
     //        //rb.AddForce(collision.impulse * bounce);
-    //        //rb.AddForce(-collision.impulse * 300);
+    //        rb.AddForce(collision.impulse * bounce);
     //    }
     //}
 

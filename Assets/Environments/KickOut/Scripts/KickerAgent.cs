@@ -19,7 +19,9 @@ public class KickerAgent : Agent
     {
         this.sensor = sensor;
         float distance = Vector3.Distance(kicker.rb.transform.position, kicker.enemyRB.transform.position);
-        AddObs(
+        
+        sensor.AddObservation(kicker.canUseBoost);
+        AddObservationPack(
             kicker.rb.transform.localPosition.x,
             kicker.rb.transform.localPosition.z,
             kicker.rb.velocity.x,
@@ -51,7 +53,7 @@ public class KickerAgent : Agent
         discAct[1] = dir[1];
         discAct[2] = dir[2];
     }
-    void AddObs(params float[] obs)
+    void AddObservationPack(params float[] obs)
     {
         // print(kicker.name + " : " + obs.ToCommaSeparatedString());
         foreach (float item in obs)
