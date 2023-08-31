@@ -244,8 +244,9 @@ MonoBehaviour:
   reward: 0
   term_reward: -1
   win_reward: 1
-  speed: 80
+  speed: 120
   boostForceMltpy: 5
+  bounce: 2
   boostCooldown: 4
   rb: {fileID: 3938507978426890892}
   enemyRB: {fileID: 6749780182193692116}
@@ -810,8 +811,9 @@ MonoBehaviour:
   reward: 0
   term_reward: -1
   win_reward: 1
-  speed: 80
+  speed: 120
   boostForceMltpy: 5
+  bounce: 2
   boostCooldown: 4
   rb: {fileID: 6749780182193692116}
   enemyRB: {fileID: 3938507978426890892}

@@ -368,9 +368,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 653060614792666821, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: speed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 653060614792666821, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: canUseBoost
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872172959296751634, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3425630974609777104, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_BehaviorType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938507978426890892, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: m_Drag
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4023668064572307856, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_Name
@@ -378,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023668064572307856, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4023668064572307887, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_RootOrder
@@ -424,6 +440,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6749780182193692116, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: m_Drag
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551087480590077458, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: speed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7551087480590077458, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: canUseBoost
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7551087480590077458, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: boostForceMltpy
       value: 5
@@ -431,7 +459,7 @@ PrefabInstance:
     - target: {fileID: 8783428474303009695, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: adfa185313c953b4585c32332bab2225, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: b511d0556e0964e4985176ea87e1f031, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -456,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1375924399
 MonoBehaviour:
   m_ObjectHideFlags: 0

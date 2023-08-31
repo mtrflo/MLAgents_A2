@@ -89,12 +89,12 @@ public class Kicker : MonoBehaviour
         
         movement = new Vector3(horizontal, 0.0f, vertical);
         movement *= speed;
-        if (actions[2] == 1 && canUseBoost)
-        {
-            movement *= boostForceMltpy;
-            canUseBoost = false;
-            Invoke(nameof(BoostTimer), boostCooldown);
-        }
+        //if (actions[2] == 1 && canUseBoost)
+        //{
+        //    movement *= boostForceMltpy;
+        //    canUseBoost = false;
+        //    Invoke(nameof(BoostTimer), boostCooldown);
+        //}
 
         
         rb.AddForce(movement);
