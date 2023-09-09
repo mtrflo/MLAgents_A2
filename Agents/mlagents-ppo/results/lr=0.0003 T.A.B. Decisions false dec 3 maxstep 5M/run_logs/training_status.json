@@ -1,0 +1,56 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 499968,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-499968.onnx",
+                "reward": null,
+                "creation_time": 1694254950.5318365,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-499968.pt"
+                ]
+            },
+            {
+                "steps": 999936,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-999936.onnx",
+                "reward": null,
+                "creation_time": 1694255201.617848,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-999936.pt"
+                ]
+            },
+            {
+                "steps": 1499968,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-1499968.onnx",
+                "reward": null,
+                "creation_time": 1694255464.60964,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-1499968.pt"
+                ]
+            },
+            {
+                "steps": 1574400,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-1574400.onnx",
+                "reward": null,
+                "creation_time": 1694255566.3983223,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-1574400.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1574400,
+            "file_path": "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1694255566.3983223,
+            "auxillary_file_paths": [
+                "results\\lr=0.0003 T.A.B. Decisions false dec 3 maxstep 5M\\Pendulum\\Pendulum-1574400.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

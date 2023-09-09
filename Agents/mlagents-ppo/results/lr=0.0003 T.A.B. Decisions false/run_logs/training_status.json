@@ -1,0 +1,65 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 1499968,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-1499968.onnx",
+                "reward": null,
+                "creation_time": 1694253279.1836894,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-1499968.pt"
+                ]
+            },
+            {
+                "steps": 1999936,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-1999936.onnx",
+                "reward": null,
+                "creation_time": 1694253603.9903402,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-1999936.pt"
+                ]
+            },
+            {
+                "steps": 2499968,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-2499968.onnx",
+                "reward": null,
+                "creation_time": 1694253939.6518943,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-2499968.pt"
+                ]
+            },
+            {
+                "steps": 2999936,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-2999936.onnx",
+                "reward": null,
+                "creation_time": 1694254457.4654572,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-2999936.pt"
+                ]
+            },
+            {
+                "steps": 3001600,
+                "file_path": "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-3001600.onnx",
+                "reward": null,
+                "creation_time": 1694254527.1249995,
+                "auxillary_file_paths": [
+                    "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-3001600.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3001600,
+            "file_path": "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1694254527.1249995,
+            "auxillary_file_paths": [
+                "results\\lr=0.0003 T.A.B. Decisions false\\Pendulum\\Pendulum-3001600.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
