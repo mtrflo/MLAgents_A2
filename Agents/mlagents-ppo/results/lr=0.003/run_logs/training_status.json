@@ -1,0 +1,65 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 2499968,
+                "file_path": "results\\lr=0.003\\Pendulum\\Pendulum-2499968.onnx",
+                "reward": null,
+                "creation_time": 1694248193.8100731,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003\\Pendulum\\Pendulum-2499968.pt"
+                ]
+            },
+            {
+                "steps": 2999936,
+                "file_path": "results\\lr=0.003\\Pendulum\\Pendulum-2999936.onnx",
+                "reward": null,
+                "creation_time": 1694248504.9139662,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003\\Pendulum\\Pendulum-2999936.pt"
+                ]
+            },
+            {
+                "steps": 3499968,
+                "file_path": "results\\lr=0.003\\Pendulum\\Pendulum-3499968.onnx",
+                "reward": null,
+                "creation_time": 1694248827.4314678,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003\\Pendulum\\Pendulum-3499968.pt"
+                ]
+            },
+            {
+                "steps": 3999936,
+                "file_path": "results\\lr=0.003\\Pendulum\\Pendulum-3999936.onnx",
+                "reward": null,
+                "creation_time": 1694249148.3279839,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003\\Pendulum\\Pendulum-3999936.pt"
+                ]
+            },
+            {
+                "steps": 4003200,
+                "file_path": "results\\lr=0.003\\Pendulum\\Pendulum-4003200.onnx",
+                "reward": null,
+                "creation_time": 1694249148.5703804,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003\\Pendulum\\Pendulum-4003200.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4003200,
+            "file_path": "results\\lr=0.003\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1694249148.5703804,
+            "auxillary_file_paths": [
+                "results\\lr=0.003\\Pendulum\\Pendulum-4003200.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
