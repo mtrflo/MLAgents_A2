@@ -384,6 +384,14 @@ PrefabInstance:
       propertyPath: m_BehaviorType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3425630974609777104, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425630974609777104, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3938507978426890892, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_Drag
       value: 0.2
@@ -394,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023668064572307856, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023668064572307887, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_RootOrder
@@ -459,7 +467,11 @@ PrefabInstance:
     - target: {fileID: 8783428474303009695, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: b511d0556e0964e4985176ea87e1f031, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783428474303009695, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
+      propertyPath: m_BehaviorType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -484,7 +496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1375924399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731aa8977d9bf324c9ec7ede1c246c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 120
+  count: 3
   env: {fileID: 4023668064572307856, guid: cbe5ce3ffcfba884db274af8cf1d5561, type: 3}
   ins_parent: {fileID: 1375924400}
   space: 25

@@ -37,8 +37,22 @@ public class KickerAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         // print(kicker.name + " action: " + actions.DiscreteActions[0]);
-        int[] d_actions = { actions.DiscreteActions[0] , actions.DiscreteActions[1] , actions.DiscreteActions[2] };
-        kicker.MakeAction(d_actions);
+        
+        //discrete
+        //int[] d_actions = { actions.DiscreteActions[0] , actions.DiscreteActions[1] , actions.DiscreteActions[2] };
+        //kicker.Make_C_Action(d_actions);
+
+        //cont
+        float angle = actions.ContinuousActions[0];
+        //print("con" + angle);
+        float il = Mathf.InverseLerp(-1,1,angle);
+        //print("il : " + il);
+        angle = Mathf.Lerp(0, 360, il);
+        //print("deg angle" + angle);
+
+        int boost = actions.DiscreteActions[0];
+        kicker.Make_C_Action(angle, boost);
+
         float s_reward = kicker.isPlaying ? kicker.reward : (kicker.win ? kicker.win_reward : kicker.term_reward);
         SetReward(s_reward);
         // print(kicker.name + " : reward : " + s_reward);
@@ -47,11 +61,19 @@ public class KickerAgent : Agent
     }
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        //discrete
+        //ActionSegment<int> discAct = actionsOut.DiscreteActions;
+        //int[] dir = kicker.PlayerChooseAction();
+        //discAct[0] = dir[0];
+        //discAct[1] = dir[1];
+        //discAct[2] = dir[2];
+
+        //cont
         ActionSegment<int> discAct = actionsOut.DiscreteActions;
-        int[] dir = kicker.PlayerChooseAction();
-        discAct[0] = dir[0];
-        discAct[1] = dir[1];
-        discAct[2] = dir[2];
+        (float, int) hact = kicker.PlayerChooseActionCont();
+        discAct[0] = hact.Item2;
+        ActionSegment<float> conAct = actionsOut.ContinuousActions;
+        conAct[0] = hact.Item1;
     }
     void AddObservationPack(params float[] obs)
     {

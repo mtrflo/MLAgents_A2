@@ -55,6 +55,31 @@ public class Kicker : MonoBehaviour
         #endregion input
         return playerActions;
     }
+
+    public (float,int) PlayerChooseActionCont()
+    {
+        int boost = 0;
+        float angle = -1;
+        float x = 0;
+        float y = 0;
+        if (Input.GetKey(KeyCode.RightArrow))
+            x = 1;
+        if (Input.GetKey(KeyCode.LeftArrow))
+            x = -1;
+        if (Input.GetKey(KeyCode.UpArrow))
+            y = 1;
+        if (Input.GetKey(KeyCode.DownArrow))
+            y = -1;
+        if (x != 0 || y != 0)
+        {
+            angle = Vector2.Angle(Vector2.right, new Vector2(x, y).normalized);
+            angle = (y < 0) ? 360 - angle : angle;
+        }
+        if (Input.GetKey(KeyCode.Space))
+            boost = 1;
+        return (angle, boost);
+    }
+
     Vector3 movement = Vector3.zero;
     public void MakeAction(int[] actions)
     {
@@ -90,6 +115,30 @@ public class Kicker : MonoBehaviour
         movement = new Vector3(horizontal, 0.0f, vertical);
         movement *= speed;
         if (actions[2] == 1 && canUseBoost)
+        {
+            movement *= boostForceMltpy;
+            canUseBoost = false;
+            Invoke(nameof(BoostTimer), boostCooldown);
+        }
+
+
+        rb.AddForce(movement);
+
+        // move the bot
+
+    }
+    public void Make_C_Action(float angle, int boost)
+    {
+        //print("angel : " +  angle);
+        if (angle == -1)
+            movement = Vector3.zero;
+        else
+        {
+            angle = angle * Mathf.Deg2Rad;
+            movement = new Vector3(Mathf.Cos(angle), 0.0f, Mathf.Sin(angle));
+        }
+        movement *= speed;
+        if (boost == 1 && canUseBoost)
         {
             movement *= boostForceMltpy;
             canUseBoost = false;
