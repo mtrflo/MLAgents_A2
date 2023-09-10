@@ -1,0 +1,65 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 2499968,
+                "file_path": "results\\beta_schedule=constant\\Pendulum\\Pendulum-2499968.onnx",
+                "reward": null,
+                "creation_time": 1694292617.2001765,
+                "auxillary_file_paths": [
+                    "results\\beta_schedule=constant\\Pendulum\\Pendulum-2499968.pt"
+                ]
+            },
+            {
+                "steps": 2999936,
+                "file_path": "results\\beta_schedule=constant\\Pendulum\\Pendulum-2999936.onnx",
+                "reward": null,
+                "creation_time": 1694292921.6278803,
+                "auxillary_file_paths": [
+                    "results\\beta_schedule=constant\\Pendulum\\Pendulum-2999936.pt"
+                ]
+            },
+            {
+                "steps": 3499904,
+                "file_path": "results\\beta_schedule=constant\\Pendulum\\Pendulum-3499904.onnx",
+                "reward": null,
+                "creation_time": 1694293226.5681899,
+                "auxillary_file_paths": [
+                    "results\\beta_schedule=constant\\Pendulum\\Pendulum-3499904.pt"
+                ]
+            },
+            {
+                "steps": 3999872,
+                "file_path": "results\\beta_schedule=constant\\Pendulum\\Pendulum-3999872.onnx",
+                "reward": null,
+                "creation_time": 1694293532.3184156,
+                "auxillary_file_paths": [
+                    "results\\beta_schedule=constant\\Pendulum\\Pendulum-3999872.pt"
+                ]
+            },
+            {
+                "steps": 4012800,
+                "file_path": "results\\beta_schedule=constant\\Pendulum\\Pendulum-4012800.onnx",
+                "reward": null,
+                "creation_time": 1694293533.032133,
+                "auxillary_file_paths": [
+                    "results\\beta_schedule=constant\\Pendulum\\Pendulum-4012800.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4012800,
+            "file_path": "results\\beta_schedule=constant\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1694293533.032133,
+            "auxillary_file_paths": [
+                "results\\beta_schedule=constant\\Pendulum\\Pendulum-4012800.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

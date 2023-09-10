@@ -1,0 +1,65 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 1499904,
+                "file_path": "results\\time_horizon=128\\Pendulum\\Pendulum-1499904.onnx",
+                "reward": null,
+                "creation_time": 1694255860.2226253,
+                "auxillary_file_paths": [
+                    "results\\time_horizon=128\\Pendulum\\Pendulum-1499904.pt"
+                ]
+            },
+            {
+                "steps": 1811200,
+                "file_path": "results\\time_horizon=128\\Pendulum\\Pendulum-1811200.onnx",
+                "reward": null,
+                "creation_time": 1694256108.5207684,
+                "auxillary_file_paths": [
+                    "results\\time_horizon=128\\Pendulum\\Pendulum-1811200.pt"
+                ]
+            },
+            {
+                "steps": 1999872,
+                "file_path": "results\\time_horizon=128\\Pendulum\\Pendulum-1999872.onnx",
+                "reward": null,
+                "creation_time": 1694256247.870103,
+                "auxillary_file_paths": [
+                    "results\\time_horizon=128\\Pendulum\\Pendulum-1999872.pt"
+                ]
+            },
+            {
+                "steps": 2499968,
+                "file_path": "results\\time_horizon=128\\Pendulum\\Pendulum-2499968.onnx",
+                "reward": null,
+                "creation_time": 1694256592.0817394,
+                "auxillary_file_paths": [
+                    "results\\time_horizon=128\\Pendulum\\Pendulum-2499968.pt"
+                ]
+            },
+            {
+                "steps": 2598400,
+                "file_path": "results\\time_horizon=128\\Pendulum\\Pendulum-2598400.onnx",
+                "reward": null,
+                "creation_time": 1694256654.2816443,
+                "auxillary_file_paths": [
+                    "results\\time_horizon=128\\Pendulum\\Pendulum-2598400.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2598400,
+            "file_path": "results\\time_horizon=128\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1694256654.2816443,
+            "auxillary_file_paths": [
+                "results\\time_horizon=128\\Pendulum\\Pendulum-2598400.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

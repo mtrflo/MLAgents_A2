@@ -1,0 +1,65 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 999936,
+                "file_path": "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-999936.onnx",
+                "reward": null,
+                "creation_time": 1694253471.223701,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-999936.pt"
+                ]
+            },
+            {
+                "steps": 1499968,
+                "file_path": "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-1499968.onnx",
+                "reward": null,
+                "creation_time": 1694253761.1318455,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-1499968.pt"
+                ]
+            },
+            {
+                "steps": 1999936,
+                "file_path": "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-1999936.onnx",
+                "reward": null,
+                "creation_time": 1694254032.572768,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-1999936.pt"
+                ]
+            },
+            {
+                "steps": 2499968,
+                "file_path": "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-2499968.onnx",
+                "reward": null,
+                "creation_time": 1694254309.1665792,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-2499968.pt"
+                ]
+            },
+            {
+                "steps": 2784000,
+                "file_path": "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-2784000.onnx",
+                "reward": null,
+                "creation_time": 1694254466.5962062,
+                "auxillary_file_paths": [
+                    "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-2784000.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2784000,
+            "file_path": "results\\lr=0.003; take-action-between_decisions=off\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1694254466.5962062,
+            "auxillary_file_paths": [
+                "results\\lr=0.003; take-action-between_decisions=off\\Pendulum\\Pendulum-2784000.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
