@@ -17,10 +17,12 @@ public class PendulumAgent : Agent
     public float force;
     static int oid;
     public float epsilon;
+    Quaternion startRot;
     private void Awake()
     {
         epsilon = Mathf.Lerp(0, 1, oid / (float)MultiEnviroment.me.count);
         oid++;
+        startRot = rb.transform.rotation;
     }
     private void Start()
     {
@@ -35,6 +37,18 @@ public class PendulumAgent : Agent
         rb.AddTorque(0, 0, torque);
     }
     float angle;
+    public override void OnEpisodeBegin()
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.transform.rotation = startRot;
+    }
+    //public override void Initialize()
+    //{
+    //    rb.velocity = Vector3.zero;
+    //    rb.angularVelocity = Vector3.zero;
+    //    transform.rotation = startRot;
+    //}
     public override void CollectObservations(VectorSensor sensor)
     {
         Vector3 toPo = (point.position - transform.position).normalized;
@@ -53,12 +67,18 @@ public class PendulumAgent : Agent
         sensor.AddObservation(ob1_sin);
         sensor.AddObservation(ob2_cos);
         sensor.AddObservation(ob3_angvel4);
+        
     }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
         MakeAction(actions.DiscreteActions[0]);
         SetReward(Mathf.Cos(angle));
+        //print("StepCount : " + StepCount);
+        //print("MaxStep : " + MaxStep);
+        
+        if (MaxStep == StepCount )
+            EndEpisode();
     }
 
 }
