@@ -38,9 +38,9 @@ behaviors:
     keep_checkpoints: 10
     checkpoint_interval: 500000
     max_steps: 5000000
-    time_horizon: 2048
+    time_horizon: 512
     summary_freq: 50000
-    threaded: false
+    threaded: true
     self_play: null
     behavioral_cloning: null
 env_settings:
@@ -57,13 +57,13 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 1
+  time_scale: 1.0
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: ppo
+  run_id: episodic test1
   initialize_from: null
   load_model: false
   resume: false

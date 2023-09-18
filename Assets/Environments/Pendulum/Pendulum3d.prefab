@@ -50,7 +50,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 1000
+  MaxStep: 50000
   rb: {fileID: 5960659438997838068}
   reward: 0.1
   terminateReward: -1

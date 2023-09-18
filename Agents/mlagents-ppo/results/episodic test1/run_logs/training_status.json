@@ -1,0 +1,29 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 491520,
+                "file_path": "results\\episodic test1\\Pendulum\\Pendulum-491520.onnx",
+                "reward": null,
+                "creation_time": 1694871362.5952394,
+                "auxillary_file_paths": [
+                    "results\\episodic test1\\Pendulum\\Pendulum-491520.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 491520,
+            "file_path": "results\\episodic test1\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1694871362.5952394,
+            "auxillary_file_paths": [
+                "results\\episodic test1\\Pendulum\\Pendulum-491520.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

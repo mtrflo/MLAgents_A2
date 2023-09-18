@@ -30,6 +30,7 @@ public class PendulumAgent : Agent
     }
     void MakeAction(int action)
     {
+        // print("make action")
         float torque = force;
         if (action == 1)
             torque = -force * Time.deltaTime;
@@ -67,7 +68,7 @@ public class PendulumAgent : Agent
         sensor.AddObservation(ob1_sin);
         sensor.AddObservation(ob2_cos);
         sensor.AddObservation(ob3_angvel4);
-        
+
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -76,8 +77,8 @@ public class PendulumAgent : Agent
         SetReward(Mathf.Cos(angle));
         //print("StepCount : " + StepCount);
         //print("MaxStep : " + MaxStep);
-        
-        if (MaxStep == StepCount )
+
+        if (MaxStep == StepCount)
             EndEpisode();
     }
 
