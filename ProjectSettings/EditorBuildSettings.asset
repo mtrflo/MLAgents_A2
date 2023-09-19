@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/testempty.unity
+    guid: 360ba50d00f6beb479099f31035a269c
   m_configObjects: {}
