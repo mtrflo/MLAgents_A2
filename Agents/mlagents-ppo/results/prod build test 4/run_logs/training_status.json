@@ -1,0 +1,39 @@
+{
+    "Kicker": {
+        "checkpoints": [
+            {
+                "steps": 499940,
+                "file_path": "results\\prod build test 4\\Kicker\\Kicker-499940.onnx",
+                "reward": null,
+                "creation_time": 1695153129.444589,
+                "auxillary_file_paths": [
+                    "results\\prod build test 4\\Kicker\\Kicker-499940.pt"
+                ]
+            },
+            {
+                "steps": 734738,
+                "file_path": "results\\prod build test 4\\Kicker\\Kicker-734738.onnx",
+                "reward": 1.0,
+                "creation_time": 1695153350.774893,
+                "auxillary_file_paths": [
+                    "results\\prod build test 4\\Kicker\\Kicker-734738.pt"
+                ]
+            }
+        ],
+        "elo": 1650.734249502584,
+        "final_checkpoint": {
+            "steps": 734738,
+            "file_path": "results\\prod build test 4\\Kicker.onnx",
+            "reward": 1.0,
+            "creation_time": 1695153350.774893,
+            "auxillary_file_paths": [
+                "results\\prod build test 4\\Kicker\\Kicker-734738.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

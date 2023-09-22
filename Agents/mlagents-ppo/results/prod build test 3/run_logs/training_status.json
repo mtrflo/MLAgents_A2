@@ -1,0 +1,129 @@
+{
+    "Kicker": {
+        "checkpoints": [
+            {
+                "steps": 499911,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-499911.onnx",
+                "reward": 0.8695652173913043,
+                "creation_time": 1695147940.3436813,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-499911.pt"
+                ]
+            },
+            {
+                "steps": 999947,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-999947.onnx",
+                "reward": -0.6666666666666666,
+                "creation_time": 1695148371.9048984,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-999947.pt"
+                ]
+            },
+            {
+                "steps": 1499962,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-1499962.onnx",
+                "reward": 0.5,
+                "creation_time": 1695148803.0065136,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-1499962.pt"
+                ]
+            },
+            {
+                "steps": 1999983,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-1999983.onnx",
+                "reward": 0.875,
+                "creation_time": 1695149236.704639,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-1999983.pt"
+                ]
+            },
+            {
+                "steps": 2499974,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-2499974.onnx",
+                "reward": 0.72,
+                "creation_time": 1695149675.3134403,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-2499974.pt"
+                ]
+            },
+            {
+                "steps": 2999922,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-2999922.onnx",
+                "reward": 0.5652173913043478,
+                "creation_time": 1695150111.6951551,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-2999922.pt"
+                ]
+            },
+            {
+                "steps": 3499948,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-3499948.onnx",
+                "reward": 0.7,
+                "creation_time": 1695150555.2711396,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-3499948.pt"
+                ]
+            },
+            {
+                "steps": 3999942,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-3999942.onnx",
+                "reward": 0.9012345679012346,
+                "creation_time": 1695150992.3827317,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-3999942.pt"
+                ]
+            },
+            {
+                "steps": 4499975,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-4499975.onnx",
+                "reward": null,
+                "creation_time": 1695151426.4774218,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-4499975.pt"
+                ]
+            },
+            {
+                "steps": 4999977,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-4999977.onnx",
+                "reward": 0.9183673469387755,
+                "creation_time": 1695151862.8931236,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-4999977.pt"
+                ]
+            },
+            {
+                "steps": 5499960,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-5499960.onnx",
+                "reward": 0.7454545454545455,
+                "creation_time": 1695152279.2141657,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-5499960.pt"
+                ]
+            },
+            {
+                "steps": 5899493,
+                "file_path": "results\\prod build test 3\\Kicker\\Kicker-5899493.onnx",
+                "reward": null,
+                "creation_time": 1695152555.6802294,
+                "auxillary_file_paths": [
+                    "results\\prod build test 3\\Kicker\\Kicker-5899493.pt"
+                ]
+            }
+        ],
+        "elo": 3511.145192326534,
+        "final_checkpoint": {
+            "steps": 5899493,
+            "file_path": "results\\prod build test 3\\Kicker.onnx",
+            "reward": null,
+            "creation_time": 1695152555.6802294,
+            "auxillary_file_paths": [
+                "results\\prod build test 3\\Kicker\\Kicker-5899493.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
