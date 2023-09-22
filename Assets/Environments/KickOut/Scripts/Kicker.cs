@@ -96,7 +96,7 @@ public class Kicker : MonoBehaviour
             Invoke(nameof(BoostTimer), boostCooldown);
         }
 
-        
+
         rb.AddForce(movement);
 
         // move the bot
