@@ -68,4 +68,11 @@ public class FlappyBirdAgent : Agent
         sensor.AddObservation(birdControl.rb.velocity.y);
         #endregion
     }
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        ActionSegment<int> discAct = actionsOut.DiscreteActions;
+        discAct[0] = 0;
+        if (Input.GetKey(KeyCode.Space))
+            discAct[0] = 1;
+    }
 }
