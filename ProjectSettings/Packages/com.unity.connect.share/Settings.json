@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"E:/Unity_All/Builds/WebGL/MLAgents/KO/enex;E:/Unity_All/Builds/WebGL/MLAgents/KO/max1024;E:/Unity_All/Builds/WebGL/MLAgents/KO/devb;;;;;;;\"}"
+                "value": "{\"m_Value\":\"E:/Unity_All/Builds/WebGL/MLAgents/KO/gzip_error_tr_kotex2;E:/Unity_All/Builds/WebGL/MLAgents/KO/gzip_error_tr_kotex;E:/Unity_All/Builds/WebGL/MLAgents/KO/Test2empty;E:/Unity_All/Builds/WebGL/MLAgents/KO/enex;E:/Unity_All/Builds/WebGL/MLAgents/KO/max1024;E:/Unity_All/Builds/WebGL/MLAgents/KO/devb;;;;\"}"
             }
         ]
     }
