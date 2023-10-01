@@ -20,7 +20,8 @@ public class PendulumAgent : Agent
     Quaternion startRot;
     private void Awake()
     {
-        epsilon = Mathf.Lerp(0, 1, oid / (float)MultiEnviroment.me.count);
+        if(MultiEnviroment.me)
+            epsilon = Mathf.Lerp(0, 1, oid / (float)MultiEnviroment.me.count);
         oid++;
         startRot = rb.transform.rotation;
     }
@@ -33,7 +34,7 @@ public class PendulumAgent : Agent
         // print("make action")
         float torque = force;
         if (action == 1)
-            torque = -force * Time.deltaTime;
+            torque = -force;
 
         rb.AddTorque(0, 0, torque);
     }
@@ -81,5 +82,12 @@ public class PendulumAgent : Agent
         if (MaxStep == StepCount)
             EndEpisode();
     }
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        ActionSegment<int> discAct = actionsOut.DiscreteActions;
+        discAct[0] = 0;
+        if (Input.GetKey(KeyCode.LeftArrow))
+            discAct[0] = 1;
 
+    }
 }
