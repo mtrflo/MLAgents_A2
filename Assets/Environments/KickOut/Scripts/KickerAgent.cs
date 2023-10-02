@@ -48,7 +48,11 @@ public class KickerAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         if (!isDefault && !isGameStarted)
+        {
+            if (!kicker.isPlaying)
+                EndEpisode();
             return;
+        }
         
         // print(kicker.name + " action: " + actions.DiscreteActions[0]);
         int[] d_actions = { actions.DiscreteActions[0] , actions.DiscreteActions[1] , actions.DiscreteActions[2] };
