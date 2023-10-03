@@ -32,10 +32,11 @@ public class PendulumAgent : Agent
     void MakeAction(int action)
     {
         // print("make action")
-        float torque = force;
+        float torque = 0;
         if (action == 1)
             torque = -force;
-
+        if (action == 2)
+            torque = force;
         rb.AddTorque(0, 0, torque);
     }
     float angle;
@@ -88,6 +89,8 @@ public class PendulumAgent : Agent
         discAct[0] = 0;
         if (Input.GetKey(KeyCode.LeftArrow))
             discAct[0] = 1;
+        if (Input.GetKey(KeyCode.RightArrow))
+            discAct[0] = 2;
 
     }
 }
