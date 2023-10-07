@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5378d251edc32c4f8d56d4392c1a75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: -0.96
+  moveSpeed: -1.3
   topPoint_l: {fileID: 9158353121714946725}
   topPoint_r: {fileID: 8351695443765221383}
   bottomPoint_l: {fileID: 7671076706361129374}

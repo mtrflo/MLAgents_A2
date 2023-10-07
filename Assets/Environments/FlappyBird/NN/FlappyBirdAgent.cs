@@ -72,7 +72,7 @@ public class FlappyBirdAgent : Agent
     {
         ActionSegment<int> discAct = actionsOut.DiscreteActions;
         discAct[0] = 0;
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             discAct[0] = 1;
     }
 }
