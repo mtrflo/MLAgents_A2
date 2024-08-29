@@ -1,0 +1,83 @@
+{
+    "Pendulum": {
+        "checkpoints": [
+            {
+                "steps": 499712,
+                "file_path": "results\\yt1\\Pendulum\\Pendulum-499712.onnx",
+                "reward": null,
+                "creation_time": 1698080423.5861826,
+                "auxillary_file_paths": [
+                    "results\\yt1\\Pendulum\\Pendulum-499712.pt"
+                ]
+            },
+            {
+                "steps": 999424,
+                "file_path": "results\\yt1\\Pendulum\\Pendulum-999424.onnx",
+                "reward": null,
+                "creation_time": 1698080704.7104986,
+                "auxillary_file_paths": [
+                    "results\\yt1\\Pendulum\\Pendulum-999424.pt"
+                ]
+            },
+            {
+                "steps": 1498341,
+                "file_path": "results\\yt1\\Pendulum\\Pendulum-1498341.onnx",
+                "reward": -3635.6124359489286,
+                "creation_time": 1698080841.0729132,
+                "auxillary_file_paths": [
+                    "results\\yt1\\Pendulum\\Pendulum-1498341.pt"
+                ]
+            },
+            {
+                "steps": 1999862,
+                "file_path": "results\\yt1\\Pendulum\\Pendulum-1999862.onnx",
+                "reward": null,
+                "creation_time": 1698081102.2395484,
+                "auxillary_file_paths": [
+                    "results\\yt1\\Pendulum\\Pendulum-1999862.pt"
+                ]
+            },
+            {
+                "steps": 2499574,
+                "file_path": "results\\yt1\\Pendulum\\Pendulum-2499574.onnx",
+                "reward": null,
+                "creation_time": 1698081384.9536989,
+                "auxillary_file_paths": [
+                    "results\\yt1\\Pendulum\\Pendulum-2499574.pt"
+                ]
+            },
+            {
+                "steps": 2998342,
+                "file_path": "results\\yt1\\Pendulum\\Pendulum-2998342.onnx",
+                "reward": 431.22536227847104,
+                "creation_time": 1698081532.471657,
+                "auxillary_file_paths": [
+                    "results\\yt1\\Pendulum\\Pendulum-2998342.pt"
+                ]
+            },
+            {
+                "steps": 3307350,
+                "file_path": "results\\yt1\\Pendulum\\Pendulum-3307350.onnx",
+                "reward": null,
+                "creation_time": 1698081786.1317255,
+                "auxillary_file_paths": [
+                    "results\\yt1\\Pendulum\\Pendulum-3307350.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3307350,
+            "file_path": "results\\yt1\\Pendulum.onnx",
+            "reward": null,
+            "creation_time": 1698081786.1317255,
+            "auxillary_file_paths": [
+                "results\\yt1\\Pendulum\\Pendulum-3307350.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
